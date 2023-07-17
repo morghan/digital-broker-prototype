@@ -1,14 +1,11 @@
-import streamlit as st
 import time
 
-from conversation_handlers import chat_completion_request, execute_function_call
-from connections import fetch_system_prompt, upload_prompt
-from streamlit_handlers import (
-    init,
-    render_conversation,
-    render_qa_agent,
-)
+import streamlit as st
 from langchain.callbacks import StreamlitCallbackHandler
+
+from connections import fetch_system_prompt, upload_prompt
+from conversation_handlers import chat_completion_request, execute_function_call
+from streamlit_handlers import init, render_conversation, render_qa_agent
 
 
 def build_custom_prompt_suffix():

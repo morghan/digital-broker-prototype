@@ -1,15 +1,16 @@
-import streamlit as st
 import time
-from streamlit_tree_select import tree_select
-from streamlit_modal import Modal
-from PyPDF2 import PdfReader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import Pinecone
 
-from main import build_custom_prompt_suffix
-from connections import fetch_namespaces, delete_namespaces
+import streamlit as st
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.vectorstores import Pinecone
+from PyPDF2 import PdfReader
+from streamlit_modal import Modal
+from streamlit_tree_select import tree_select
+
+from connections import delete_namespaces, fetch_namespaces
 from langchain_handlers import create_qa_agent
+from main import build_custom_prompt_suffix
 from streamlit_handlers import render_qa_agent
 
 
