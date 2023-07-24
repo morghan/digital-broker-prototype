@@ -1,11 +1,12 @@
 import time
-
 import streamlit as st
 from langchain.callbacks import StreamlitCallbackHandler
 
+from streamlit_handlers import init, render_conversation, render_qa_agent
 from connections import fetch_system_prompt, upload_prompt
 from conversation_handlers import chat_completion_request, execute_function_call
-from streamlit_handlers import init, render_conversation, render_qa_agent
+
+init()
 
 
 def build_custom_prompt_suffix():
@@ -166,5 +167,4 @@ def main():
 
 
 if __name__ == "__main__":
-    init()
     main()

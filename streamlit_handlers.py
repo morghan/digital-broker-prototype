@@ -2,6 +2,9 @@ import streamlit as st
 from dotenv import load_dotenv
 import os
 
+# This must be the first streamlit command called, otherwise it won't work
+st.set_page_config(page_title="ChatGPT Clone", page_icon="💬")
+
 
 @st.cache_data(ttl=60 * 60)
 def init():

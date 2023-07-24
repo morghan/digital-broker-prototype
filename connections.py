@@ -5,8 +5,6 @@ import streamlit as st
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 
-# This must be the first streamlit command called, otherwise it won't work
-st.set_page_config(page_title="ChatGPT Clone", page_icon="💬")
 
 # Connect to pinecone kb
 pinecone.init(

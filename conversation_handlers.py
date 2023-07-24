@@ -1,11 +1,11 @@
-import streamlit as st
-import openai
-import os
 import json
-import requests
-from tenacity import retry, wait_random_exponential, stop_after_attempt
-from langchain.callbacks import get_openai_callback
+import os
 
+import openai
+import requests
+import streamlit as st
+from langchain.callbacks import get_openai_callback
+from tenacity import retry, stop_after_attempt, wait_random_exponential
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 GPT_MODEL = "gpt-3.5-turbo-16k-0613"
