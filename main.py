@@ -63,7 +63,7 @@ def reset_chat(custom_prompt):
 def main():
     st.header("👨‍💻QUALIFYI - AI Broker")
     st.subheader(
-        "You can freely chat with the AI Broker. You can also upload (txt file) a system prompt for the broker to follow."
+        "You can freely chat with the AI Broker. You can also upload a system prompt for the broker to follow."
     )
     with st.sidebar:
         # System Message upload
