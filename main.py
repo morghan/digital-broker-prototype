@@ -2,11 +2,9 @@ import time
 import streamlit as st
 from langchain.callbacks import StreamlitCallbackHandler
 
-from streamlit_handlers import init, render_conversation, render_qa_agent
+from streamlit_handlers import render_conversation, render_qa_agent
 from connections import fetch_system_prompt, upload_prompt
 from conversation_handlers import chat_completion_request, execute_function_call
-
-init()
 
 
 def build_custom_prompt_suffix():
@@ -63,6 +61,10 @@ def reset_chat(custom_prompt):
 
 
 def main():
+    st.header("👨‍💻QUALIFYI - AI Broker")
+    st.subheader(
+        "You can freely chat with the AI Broker. You can also upload (txt file) a system prompt for the broker to follow."
+    )
     with st.sidebar:
         # System Message upload
         with st.form("system_prompt", clear_on_submit=True):

@@ -14,7 +14,7 @@ pinecone.init(
     environment=st.secrets["pinecone"]["env"],
 )
 chat = ChatOpenAI(
-    model="gpt-3.5-turbo-16k",
+    model=st.secrets["llm"]["agent_model"],
     temperature=0,
     streaming=True,
 )
